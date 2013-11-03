@@ -1,5 +1,7 @@
 # charlatan [![Build Status](https://travis-ci.org/loki2302/charlatan.png?branch=master)](https://travis-ci.org/loki2302/charlatan)
 
+A pure-Java fake/test data generator. Better description coming soon.
+
 # Maven
 
     <repositories>
