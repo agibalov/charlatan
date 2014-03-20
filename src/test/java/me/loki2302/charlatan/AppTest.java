@@ -33,4 +33,24 @@ public class AppTest {
         assertTrue(counts[0] <= counts[1]);
         assertTrue(counts[1] <= counts[2]);        
     }
+    
+    @Test
+    public void randomEventGeneratorWorks() {
+        RandomEventGenerator<Integer> reg = new RandomEventGeneratorBuilder<Integer>()
+                .withEvent(0, 1)
+                .withEvent(1, 10)
+                .withEvent(2, 100)
+                .build();
+        
+        int[] counts = new int[3];
+        Arrays.fill(counts, 0);
+        
+        for(int i = 0; i < 10000; ++i) {
+            int sample = reg.makeEvent();
+            ++counts[sample];
+        }
+        
+        assertTrue(counts[0] <= counts[1]);
+        assertTrue(counts[1] <= counts[2]);
+    }
 }

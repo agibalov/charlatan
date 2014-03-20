@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+@Deprecated
 public class RandomOptionGenerator<T> {
     private final Random random = new Random();
     private final List<OptionInfo<T>> options = new ArrayList<OptionInfo<T>>();
